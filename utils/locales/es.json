@@ -1,0 +1,50 @@
+{
+  "greeting": "Hola",
+  "profile": {
+    "welcome": "Bienvenido a tu perfil",
+    "update_success": "Perfil actualizado con éxito",
+    "language_preference_set_successfully": "Preferencia de idioma establecida con éxito"
+  },
+  "auth": {
+    "signup_success": "¡Registro exitoso!",
+    "login_success": "¡Inicio de sesión exitoso!",
+    "logout_success": "¡Cierre de sesión exitoso!",
+    "password_reset": "¡Restablecimiento de contraseña exitoso!",
+    "password_reset_failed": "¡Error al restablecer la contraseña!",
+    "token_sent_to_mail": "¡Token enviado por correo! {url}"
+  },
+  "errors": {
+    "user_not_found": "¡Usuario no encontrado!",
+    "missing_name": "¡Falta el nombre!",
+    "missing_type": "¡Falta el tipo!",
+    "missing_data": "¡Faltan datos!",
+    "missing_language": "¡Falta el idioma!",
+    "invalid_field": "Campo inválido {field}: {value}",
+    "duplicate_field_value": "Valor de campo duplicado: '{value}' Por favor use otro valor",
+    "invalid_field_data": "Datos de campo inválidos {errors} Error crítico",
+    "invalid_token": "Token inválido. Por favor inicie sesión nuevamente",
+    "token_expired": "Su token ha expirado, Por favor inicie sesión nuevamente",
+    "something_went_wrong": "Algo salió muy mal",
+    "error_creating_folder": "Error al crear la carpeta",
+    "error_saving_file": "Error al guardar el archivo",
+    "error_updating_file": "Error al actualizar el archivo",
+    "error_deleting_file": "Error al eliminar el archivo",
+    "error_setting_language_preference": "Error al establecer la preferencia de idioma",
+    "unauthorized_login": "¡No autorizado! Por favor inicie sesión",
+    "passwords_must_match": "La contraseña y la confirmación de la contraseña deben coincidir",
+    "provide_full_signup_details": "Por favor proporcione todos los detalles de registro",
+    "user_already_exists": "El usuario ya existe. Por favor inicie sesión",
+    "provide_login_details": "Por favor proporcione los detalles de inicio de sesión",
+    "email_or_password_incorrect": "Correo electrónico o contraseña incorrectos",
+    "expired_or_invalid_token": "¡Token expirado o inválido! Por favor intente nuevamente"
+  },
+  "files": {
+    "file_uploaded_successfully": "Archivo subido con éxito",
+    "file_updated_successfully": "Archivo actualizado con éxito",
+    "file_deleted_successfully": "Archivo eliminado con éxito",
+    "file_name_updated_successfully": "Nombre del archivo actualizado con éxito"
+  },
+  "app": {
+    "api_is_live": "¡La API está en vivo!"
+  }
+}

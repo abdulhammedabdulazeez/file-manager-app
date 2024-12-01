@@ -1,0 +1,50 @@
+{
+  "greeting": "Hello",
+  "profile": {
+    "welcome": "Welcome to your profile",
+    "update_success": "Profile updated successfully",
+    "language_preference_set_successfully": "Language preference set successfully"
+  },
+  "auth": {
+    "signup_success": "Sign up successful!",
+    "login_success": "Login successful!",
+    "logout_success": "Logout successful!",
+    "password_reset": "Password reset successful!",
+    "password_reset_failed": "Password reset failed!",
+    "token_sent_to_mail": "Token sent to mail! {url}"
+  },
+  "errors": {
+    "user_not_found": "User not found!",
+    "missing_name": "Missing name!",
+    "missing_type": "Missing type!",
+    "missing_data": "Missing data!",
+    "missing_language": "Missing language!",
+    "invalid_field": "Invalid {field}: {value}",
+    "duplicate_field_value": "Duplicate field value: '{value}' Please use another value",
+    "invalid_field_data": "Invalid field data {errors} Critical Error",
+    "invalid_token": "Invalid token. Please login again",
+    "token_expired": "Your token is expired, Please login again",
+    "something_went_wrong": "Something went very wrong",
+    "error_creating_folder": "Error creating folder",
+    "error_saving_file": "Error saving file",
+    "error_updating_file": "Error updating file",
+    "error_deleting_file": "Error deleting file",
+    "error_setting_language_preference": "Error setting language preference",
+    "unauthorized_login": "Unauthorized! Please Login",
+    "passwords_must_match": "Password and Confirm Password must be same",
+    "provide_full_signup_details": "Please provide full sign up details",
+    "user_already_exists": "User already exists. Please login",
+    "provide_login_details": "Please provide login details",
+    "email_or_password_incorrect": "Email or Password incorrect",
+    "expired_or_invalid_token": "Expired or Invalid Token! Please try again"
+  },
+  "files": {
+    "file_uploaded_successfully": "File uploaded successfully",
+    "file_updated_successfully": "File updated successfully",
+    "file_deleted_successfully": "File deleted successfully",
+    "file_name_updated_successfully": "File name updated successfully"
+  },
+  "app": {
+    "api_is_live": "API is live!"
+  }
+}

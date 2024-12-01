@@ -1,0 +1,50 @@
+{
+  "greeting": "Bonjour",
+  "profile": {
+    "welcome": "Bienvenue sur votre profil",
+    "update_success": "Profil mis à jour avec succès",
+    "language_preference_set_successfully": "Préférence linguistique définie avec succès"
+  },
+  "auth": {
+    "signup_success": "Inscription réussie!",
+    "login_success": "Connexion réussie!",
+    "logout_success": "Déconnexion réussie!",
+    "password_reset": "Réinitialisation du mot de passe réussie!",
+    "password_reset_failed": "Échec de la réinitialisation du mot de passe!",
+    "token_sent_to_mail": "Token envoyé par mail! {url}"
+  },
+  "errors": {
+    "user_not_found": "Utilisateur non trouvé!",
+    "missing_name": "Nom manquant!",
+    "missing_type": "Type manquant!",
+    "missing_data": "Données manquantes!",
+    "missing_language": "Langue manquante!",
+    "invalid_field": "Champ invalide {field}: {value}",
+    "duplicate_field_value": "Valeur de champ en double: '{value}' Veuillez utiliser une autre valeur",
+    "invalid_field_data": "Données de champ invalides {errors} Erreur critique",
+    "invalid_token": "Jeton invalide. Veuillez vous reconnecter",
+    "token_expired": "Votre jeton a expiré, Veuillez vous reconnecter",
+    "something_went_wrong": "Quelque chose s'est très mal passé",
+    "error_creating_folder": "Erreur lors de la création du dossier",
+    "error_saving_file": "Erreur lors de l'enregistrement du fichier",
+    "error_updating_file": "Erreur lors de la mise à jour du fichier",
+    "error_deleting_file": "Erreur lors de la suppression du fichier",
+    "error_setting_language_preference": "Erreur lors de la définition de la préférence linguistique",
+    "unauthorized_login": "Non autorisé! Veuillez vous connecter",
+    "passwords_must_match": "Le mot de passe et la confirmation du mot de passe doivent être identiques",
+    "provide_full_signup_details": "Veuillez fournir tous les détails de l'inscription",
+    "user_already_exists": "L'utilisateur existe déjà. Veuillez vous connecter",
+    "provide_login_details": "Veuillez fournir les détails de connexion",
+    "email_or_password_incorrect": "Email ou mot de passe incorrect",
+    "expired_or_invalid_token": "Jeton expiré ou invalide! Veuillez réessayer"
+  },
+  "files": {
+    "file_uploaded_successfully": "Fichier téléchargé avec succès",
+    "file_updated_successfully": "Fichier mis à jour avec succès",
+    "file_deleted_successfully": "Fichier supprimé avec succès",
+    "file_name_updated_successfully": "Nom du fichier mis à jour avec succès"
+  },
+  "app": {
+    "api_is_live": "L'API est en ligne!"
+  }
+}

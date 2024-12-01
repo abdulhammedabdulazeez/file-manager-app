@@ -1,16 +1,17 @@
-// db.js
-require("dotenv").config(); // Load environment variables
 const mongoose = require("mongoose");
+require("dotenv").config();
+const appError = require("../utils/appError");
+const logger = require("../utils/logger");
 
-const DB_URI = process.env.MONGO_URI || "mongodb://localhost:27017/filemanager";
+const url = process.env.MONGO_URI;
 
 // const connectDB = async () => {
 //   try {
-//     await mongoose.connect(DB_URI);
-//     console.log("Connected to MongoDB");
-//   } catch (err) {
-//     console.error("Database connection error:", err);
-//     process.exit(1); // Exit process with failure
+//     await mongoose.connect(url);
+//     logger.info("DB Connected!");
+//   } catch (error) {
+//     logger.error(error);
+//     return new appError(error.message, 500);
 //   }
 // };
 
@@ -19,30 +20,43 @@ class DBClient {
     this.db = null;
     this.usersCollection = null;
     this.filesCollection = null;
-    this.connect();
+    // this.connect();
   }
 
-  async connect() {
+    async connectDB() {
     try {
-      const client = await mongoose.connect(DB_URI);
+      const client = await mongoose.connect(url);
       this.db = client.connection.db;
       this.usersCollection = this.db.collection("users");
       this.filesCollection = this.db.collection("files");
-      console.log("Connected to MongoDB");
-    } catch (err) {
-      console.error("Database connection error:", err.message);
-      this.db = false;
-      process.exit(1); // Exit process with failure
+      logger.info("DB Connected!");
+    } catch (error) {
+      logger.error(error);
+      return new appError(error.message, 500);
     }
-  }
+  };
+
+  // async connect() {
+  //   try {
+  //     const client = await mongoose.connect(DB_URI);
+  //     this.db = client.connection.db;
+  //     this.usersCollection = this.db.collection("users");
+  //     this.filesCollection = this.db.collection("files");
+  //     console.log("Connected to MongoDB");
+  //   } catch (err) {
+  //     console.error("Database connection error:", err.message);
+  //     this.db = false;
+  //     process.exit(1); // Exit process with failure
+  //   }
+  // }
 
   /**
    * Checks if connection to Redis is Alive
    * @return {boolean} true if connection alive or false if not
    */
-    isAlive() {
-      return !!this.db;
-    }
+  isAlive() {
+    return !!this.db;
+  }
 
   /**
    * Returns the number of documents in the collection users
