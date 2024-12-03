@@ -18,11 +18,12 @@ passport.use(
     {
       secretOrKey: process.env.JWT_SECRET,
       jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+      passReqToCallback: true,
     },
     async (token, done) => {
       console.log("token :", token);
       if (!token) {
-        throw new appError(req.__('errors.unauthorized_login'), 401);
+        throw new appError(req.__("errors.unauthorized_login"), 401);
         // return done(null, false);
       }
       try {
@@ -104,15 +105,15 @@ passport.use(
       passwordField: "password",
     },
     async (email, password, done) => {
-      req.setLocale(languagePreference);
+      // req.setLocale(req.body.languagePreference || "en");
       try {
         if (!(email || password)) {
-          throw new appError(req.__('errors.provide_login_details'), 400);
+          throw new appError(req.__("errors.provide_login_details"), 400);
         }
 
         const user = await userModel.findOne({ email });
         if (!user || !(await user.isValidPassword(password))) {
-          throw new appError(req.__('errors.email_or_password_incorrect'), 401);
+          throw new appError(req.__("errors.email_or_password_incorrect"), 401);
         }
 
         const userData = await createSendToken(user);

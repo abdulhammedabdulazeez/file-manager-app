@@ -10,7 +10,7 @@ const crypto = require("crypto");
  */
 exports.signup = async (req, res, next) => {
   const user = req.user;
-  req.setLocale(user.languagePreference);
+  req.setLocale(user.languagePreference || "en");
   res.status(201).json({
     status: "success",
     message: req.__('auth.signup_success'), // Use i18n for localized message
@@ -24,7 +24,7 @@ exports.signup = async (req, res, next) => {
 exports.login = async (req, res, next) => {
   const user = req.user;
 
-  req.setLocale(user.languagePreference);
+  req.setLocale(user.languagePreference || "en");
 
   res.status(200).json({
     status: "success",
